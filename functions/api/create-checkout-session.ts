@@ -141,7 +141,7 @@ function json(error: string, status: number, extra: Record<string, unknown> = {}
 }
 
 /** Betaling midlertidig stengt. Keep in sync with STORE.checkoutEnabled and commerce-runtime.js. */
-const CHECKOUT_ENABLED = false;
+const CHECKOUT_ENABLED = true;
 
 export async function onRequestPost(context: { request: Request; env: Env }) {
   // Dual gate: hard flag + per-store setting from STORE (folded from checkout-off PR).
@@ -152,8 +152,8 @@ export async function onRequestPost(context: { request: Request; env: Env }) {
       { checkoutEnabled: false, store: STORE.slug },
     );
   }
-  if (!context.env.STRIPE_SECRET_KEY?.startsWith("sk_test_")) {
-    return json("Test-mode payments are not configured (expects sk_test_)", 503);
+  if (!/^sk_(test|live)_/.test(context.env.STRIPE_SECRET_KEY || "")) {
+    return json("Payments are not configured (expects sk_test_ or sk_live_)", 503);
   }
 
   let body: CheckoutPayload;

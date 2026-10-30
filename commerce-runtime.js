@@ -16,7 +16,7 @@
   /* Betaling midlertidig stengt. Sett til true for å åpne kassen igjen
      (hold i synk med STORE.checkoutEnabled i functions/_shared/store.ts
      og CHECKOUT_ENABLED i functions/api/create-checkout-session.ts). */
-  const CHECKOUT_ENABLED = false;
+  const CHECKOUT_ENABLED = true;
   const FREE_SHIPPING_NOK = 599;
   let started = false;
 
