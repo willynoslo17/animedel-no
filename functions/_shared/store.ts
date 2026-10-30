@@ -11,5 +11,5 @@ export const STORE = {
    * Do not flip this on just because STRIPE_SECRET_KEY / supplier env keys are present.
    * Keep in sync with CHECKOUT_ENABLED in commerce-runtime.js and create-checkout-session.ts.
    */
-  checkoutEnabled: false,
+  checkoutEnabled: true,
 } as const;
