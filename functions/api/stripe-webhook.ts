@@ -158,7 +158,8 @@ export async function onRequestPost(context: { request: Request; env: Env; waitU
   const secret = context.env.STRIPE_WEBHOOK_SECRET;
   const makeHook = context.env.MAKE_ORDERS_WEBHOOK;
   const storeKey = context.env.ML_STORE_KEY;
-  if (!secret || !makeHook || !storeKey) return Response.json({ error: "Webhook not configured" }, { status: 503 });
+  void storeKey; // optional (x-store-key header); missing key must not block paid orders
+  if (!secret || !makeHook) return Response.json({ error: "Webhook not configured" }, { status: 503 });
 
   const payload = await context.request.text();
   const signature = context.request.headers.get("stripe-signature") || "";
