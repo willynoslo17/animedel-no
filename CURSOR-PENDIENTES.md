@@ -42,3 +42,8 @@ Auditoría 2026-10-23. Rama `cursor/animedel-no-auditoria-2026-10` desde `main`.
 - `index.html` cargado en Chrome headless con servidor estático: sin errores de JavaScript. Solo 404 de `/api/cj-products` y `/api/newsletter` (Pages Functions, no existen en un servidor estático local; esperado).
 - `node --check` en los `.js` de la raíz: OK. No hay `package.json` ni build.
 - Búsqueda de claves `sk_live_`/`sk_test_`/`ghp_`/`EAA`: vacía. `create-checkout-session.ts` sin cambios respecto a `main`.
+
+## 2026-10-31 i18n
+- 4 språk NO/EN/SV/PL (maskinoversatt, bør korrekturleses)
+- Fjernet ES/Peru/Europa, skjult leverandørnavn
+- Gjenstår: Stripe-locale, Brevo-e-poster kun norsk
