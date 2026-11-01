@@ -497,7 +497,7 @@ function renderProducts(){
   const list=filteredList();
   $('#products').innerHTML=list.length
     ? list.map(p=>productCard(p)).join('')
-    : '<p class="muted">Produktene lastes inn. Vises ingenting, prøv igjen om litt.</p>';
+    : '<p class="muted">Nye produkter kommer snart.</p>';
   renderFavorites();
 }
 
