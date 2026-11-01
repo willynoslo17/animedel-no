@@ -34,6 +34,7 @@
     "pet bowl"
   ],
   "pids": [
+    "1652150308866363392",
     "FC14FBC6-7138-4878-99F7-289DBFB9D536",
     "1650398167256535040",
     "0128A917-A355-4D8D-AA59-4FAA4F0013AD",
@@ -710,6 +711,18 @@
       "image": "https://cf.cjdropshipping.com/b18277fe-7e04-421c-9fd0-7759fa039e35.jpg",
       "supplierPriceMaxUsd": 4.0371,
       "keyword": "cat teaser wand"
+    },
+    {
+      "id": "1652150308866363392",
+      "sku": "CJJT174706201AZ",
+      "name": "Uttrekkbart hundebånd med oppladbart lys (30/50 kg)",
+      "nameEn": "Pet Retractable Charging Lead Rope",
+      "category": "Dyreutstyr",
+      "image": "https://cf.cjdropshipping.com/86ff3ab9-f943-4249-bca4-6df7d2548939.jpg",
+      "supplierPriceMaxUsd": 6.17,
+      "keyword": "",
+      "description": "Uttrekkbart hundebånd med innebygd lys som lades med USB, for hunder opptil 30 eller 50 kg. Velg farge og størrelse. CE (EMC) og RoHS-dokumentasjon fra leverandøren.",
+      "certified": "2026-11-01"
     }
   ]
 }
